@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MK Custom Buttons</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <script type="module" src="./components/MKButton/MKButton.mjs"></script>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Custom buttons</h1>
+
+    <section class="button-container">
+      <!-- basic button -->
+      <mk-button label="Default Button" onclick="clickTest(1)"></mk-button>
+      <!-- <button onclick="clickTest(1)">Default Button</button> -->
+
+      <!-- button with custom class -->
+      <mk-button
+        class="styled-button"
+        label="Styled Button"
+        onclick="clickTest(2)"
+      ></mk-button>
+
+      <!-- button with icon on the left -->
+      <mk-button label="Left Icon" onclick="clickTest(3)"
+        ><i class="fa-solid fa-envelope" slot="icon-before"></i
+      ></mk-button>
+
+      <!-- button with icon on the right -->
+      <mk-button label="Right Icon" onclick="clickTest(4)"
+        ><i class="fa-solid fa-download" slot="icon-after"></i
+      ></mk-button>
+
+      <!-- disabled button -->
+      <mk-button
+        label="Disabled Button"
+        disabled
+        onclick="clickTest(5)"
+      ></mk-button>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

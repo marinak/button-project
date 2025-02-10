@@ -1,0 +1,43 @@
+:host {
+  display: inline-block;
+
+  .mk-button {
+    background: var(--mk-button-background, #336c66);
+    color: var(--mk-button-color, white);
+    padding: var(--mk-button-padding, 0.5em 1em);
+    border-radius: var(--mk-button-border-radius, 0.25em);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+
+    &:not([disabled]) {
+      &:hover {
+        background: var(--mk-button-hover-background, #23514c);
+      }
+
+      &:focus {
+        outline: var(--mk-button-focus-outline, #336c6666);
+      }
+    }
+
+    &[disabled] {
+      background: var(--mk-button-disabled-background, #ddd);
+      color: var(--mk-button-disabled-color, #666);
+      cursor: not-allowed;
+    }
+
+    .icon::slotted(*) {
+      width: 1em;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .mk-button__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75em;
+  }
+}
